@@ -1,4 +1,4 @@
-# Personal Fitness App
+# Personal Fitness App 
 
 A Streamlit-based personal fitness application that allows users to:
 

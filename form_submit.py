@@ -2,6 +2,17 @@ from db import personal_data_collection, notes_collection
 from datetime import datetime
 
 def update_personal_data(existing_data, updated_type, **kwargs):
+    """
+    Update specific fields in a user's personal data document.
+
+    Args:
+        existing_data (dict): Current user data document from MongoDB
+        updated_type (str): Type of data being updated (e.g., 'goals', 'profile', 'measurements')
+        **kwargs: Variable keyword arguments containing the new data
+
+    Returns:
+        dict: The updated user data document
+    """
     if updated_type == "goals":
         existing_data["goals"] = kwargs.get("goals", [])
         updated_field = {
